@@ -1,0 +1,15 @@
+<h3 class="insightHeader">Top Insights</h3>
+<div style="width:300px;height: 200px;overflow-y: auto;">
+  <div *ngIf="insights">
+    <ul class="insightList">
+      <li *ngFor="let insight of insights">
+        <h6>{{ insight.type}}</h6>
+        <div class="instances">
+          <span *ngFor="let instance of insight.instances">
+            {{ instance.name }},
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
